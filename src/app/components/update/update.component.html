@@ -1,0 +1,34 @@
+<section>
+    <div class="container">
+        <div class="form-container">
+            <form (ngSubmit)="updateTask()">
+                <div class="form-input">
+                    <label for="data">Título</label>
+                    <input style="width: 250px;" id="title" [(ngModel)]="task.title" name="title" required type="text"
+                        placeholder="Título da atividade">
+                </div>
+                <div class="form-input-desc">
+                    <label for="data"><img class="form-icon" src="menu-alt-2-svgrepo-com.svg" alt=""></label>
+                    <input style="height: 50px; width: 250px;" id="description" [(ngModel)]="task.description"
+                        name="description" required type="text" placeholder="Descreva sua atividade">
+                </div>
+                <div class="form-input-select">
+                    <label for="data"><img class="form-icon" src="in-progress-svgrepo-com.svg" alt=""></label>
+                    <select id="status" [(ngModel)]="task.status" name="status" required>
+                        <option value="Em Andamento" selected>Em Andamento</option>
+                        <option value="Concluído">Concluído</option>
+                    </select>
+                </div>
+                <div class="input-date">
+                    <label for="data">Prazo</label>
+                    <input id="time" [(ngModel)]="task.time" name="time" required type="date" />
+                </div>
+                <div class="div-button">
+                    <button type="submit" class="button-default">Editar tarefa</button>
+                    <a class="btn-cancel" href="/">Cancelar</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>
