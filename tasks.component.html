@@ -1,0 +1,70 @@
+<section>
+    <div class="container">
+        <div class="bt-add">
+            <button class="toggle-button" (click)="toggleForm(); $event.preventDefault()"><img class="task-icon"
+                    src="task-done-svgrepo-com.svg" alt=""> Adicionar nova
+                tarefa</button>
+        </div>
+        <div class="shadow-table">
+
+        </div>
+        <hr>
+        <div *ngIf="showForm" @fadeInOut class="form-container">
+            <form (submit)="addTask(); $event.preventDefault()">
+                <div class="form-input">
+                    <label for="data">Título</label>
+                    <input name="title" type="text" placeholder="Título da atividade" [(ngModel)]="newTask.title">
+                </div>
+                <div class="form-input-desc">
+                    <label for="data"><img class="form-icon" src="menu-alt-2-svgrepo-com.svg" alt=""></label>
+                    <input name="description" class="desc-input" type="text" placeholder="Descreva sua atividade"
+                        [(ngModel)]="newTask.description">
+                </div>
+                <div class="form-input-select">
+                    <label for="data"><img class="form-icon" src="in-progress-svgrepo-com.svg" alt=""></label>
+                    <select name="status" [(ngModel)]="newTask.status">
+                        <option value="Em Andamento" selected>Em Andamento</option>
+                        <option value="Concluído">Concluído</option>
+                    </select>
+                </div>
+                <div class="input-date">
+                    <label for="data">Prazo</label>
+                    <input name="time" type="date" [(ngModel)]="newTask.time" />
+                </div>
+                <div class="div-button">
+                    <button type="submit" class="button-default">Adicionar tarefa</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container-task">
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Prazo</th>
+                    <th>Status</th>
+                    <th>Editar</th>
+                    <th>Deletar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let task of tasks">
+                    <td>{{task.title}}</td>
+                    <td>{{task.description}}</td>
+                    <td>{{task.time}}</td>
+                    <td>{{task.status}}</td>
+                    <td><a href="/easy-task/update/{{task.id}}"><img class="img-edit" src="edit-1479-svgrepo-com.svg"
+                                alt=""></a>
+                    </td>
+                    <td><button (click)="deleteTask(task.id)"><img class="img-delete" src="delete-note-svgrepo-com.svg"
+                                alt=""></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
