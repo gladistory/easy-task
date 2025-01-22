@@ -1,322 +1,394 @@
-@media (min-width: 1100px) {
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop-only {
+    display: block;
+  }
   .container {
+    max-width: 540px;
     width: 100%;
-    max-width: 550px;
     margin: 0 auto;
     position: relative;
   }
+
+  .container-task {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .toggle-button {
+    font-style: none;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    background-color: rgb(237, 237, 237);
+  }
+
+  .toggle-button:hover {
+    background-color: #c4c4c4;
+    width: 100%;
+    transition: 1s ease;
+    border-radius: 4px;
+  }
+
+  html {
+    font-family: "proxima-nova", sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    color: #141414;
+  }
+
+  a {
+    text-decoration: none;
+    color: #141414;
+  }
+
+  .d-flex {
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .justify-content-between {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .align-items-center {
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .paddingBottom50 {
+    padding-bottom: 50px;
+  }
+
+  .maxW340 {
+    max-width: 340px;
+  }
+
+  .button-default {
+    border-radius: 4px;
+    background-color: #141414;
+    color: #ffffff;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    height: 30px;
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .button-default:hover {
+    background-color: #333;
+  }
+
+  .bt-add {
+    border-radius: 4px;
+    color: #141414;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 48px;
+    margin-top: 26px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .task-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  }
+
+  .bt-add:hover {
+    background-color: #c4c4c4;
+    width: 100%;
+    transition: 1s ease;
+  }
+  /* formulário */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.283);
+  }
+  label {
+    margin-right: 5px;
+  }
+
+  /* Efeito ao focar nos inputs */
+  .form-input:focus {
+    outline: none; /* Remove borda padrão */
+    border-color: #aaa; /* Cor roxa para o foco */
+    box-shadow: 0 0 6px rgba(98, 0, 238, 0.4); /* Sombra leve */
+    background-color: #f9f9ff; /* Fundo ligeiramente destacado */
+  }
+
+  .desc-input {
+    border: none;
+    text-decoration: none;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    resize: none;
+  }
+
+  input {
+    border: none;
+    text-decoration: none;
+  }
+  input::placeholder {
+    color: #aaa; /* Cinza claro */
+    font-family: Arial, Helvetica, sans-serif; /* Estilo para distinguir do texto inserido */
+  }
+
+  input,
+  select {
+    outline: 0;
+  }
+
+  .desc-input::placeholder {
+    color: #aaa; /* Cinza claro */
+    font-family: Arial, Helvetica, sans-serif; /* Estilo para distinguir do texto inserido */
+    padding-top: 20px;
+  }
+
+  label {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  /* Estilização específica para data picker */
+  .input-date {
+    padding: 6px 14px;
+    font-family: inherit; /* Usa a fonte padrão do formulário */
+    color: #141414;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    padding: 10px 14px; /* Espaçamento interno confortável */
+    font-size: 15px; /* Tamanho de texto maior */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 4px; /* Bordas arredondadas */
+    background-color: #fff;
+    box-sizing: border-box; /* Padding incluso no tamanho */
+    transition: all 0.3s ease; /* Transição suave para foco */
+  }
+
+  /* Adição de transição ao hover no input */
+  .form-input:hover {
+    border-color: #888; /* Bordas levemente destacadas */
+  }
+
+  .input-data:hover {
+    border-color: #888; /* Bordas levemente destacadas */
+  }
+
+  .form-input {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    padding: 10px 14px; /* Espaçamento interno confortável */
+    font-size: 15px; /* Tamanho de texto maior */
+    color: #333; /* Cor do texto */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 4px; /* Bordas arredondadas */
+    background-color: #fff;
+    box-sizing: border-box; /* Padding incluso no tamanho */
+    transition: all 0.3s ease; /* Transição suave para foco */
+  }
+
+  .form-input-desc {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    padding: 10px 14px; /* Espaçamento interno confortável */
+    font-size: 15px; /* Tamanho de texto maior */
+    color: #333; /* Cor do texto */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 4px; /* Bordas arredondadas */
+    background-color: #fff;
+    box-sizing: border-box; /* Padding incluso no tamanho */
+    transition: all 0.3s ease; /* Transição suave para foco */
+  }
+  .form-input-desc:hover {
+    border-color: #888; /* Bordas levemente destacadas */
+  }
+
+  .div-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .form-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Tabela Tasks */
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  th {
+    background-color: #141414;
+    color: #fff;
+  }
+
+  th,
+  td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+  }
+
+  .img-edit {
+    width: 20px;
+    height: 20px;
+  }
+
+  .img-delete {
+    width: 25px;
+    height: 25px;
+  }
+
+  select {
+    border: none;
+  }
+
+  .form-input-select {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    width: 35%;
+    padding: 10px 14px; /* Espaçamento interno confortável */
+    font-size: 15px; /* Tamanho de texto maior */
+    color: #333; /* Cor do texto */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 4px; /* Bordas arredondadas */
+    background-color: #fff;
+    box-sizing: border-box; /* Padding incluso no tamanho */
+    transition: all 0.3s ease; /* Transição suave para foco */
+  }
+  .form-input-select:hover {
+    border-color: #888; /* Bordas levemente destacadas */
+  }
+
+  button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+  }
 }
 
-.container-task {
-  width: 70%;
-  margin: 0 auto;
-  position: relative;
+/* Mobile */
+
+.mobile-only {
+  display: none;
 }
 
-.toggle-button {
-  font-style: none;
-  border: none;
-  width: 100%;
-  padding: 10px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 15px;
-  background-color: rgb(237, 237, 237);
-}
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
 
-.toggle-button:hover {
-  background-color: #c4c4c4;
-  width: 100%;
-  transition: 1s ease;
-  border-radius: 4px;
-}
+  .title {
+    text-decoration: solid;
+    font-size: 18px;
+    font-weight: 550;
+    padding: 20px;
+    color: darkblue;
+  }
 
-html {
-  font-family: "proxima-nova", sans-serif;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  color: #141414;
-}
+  .description {
+    width: 100%;
+    display: flex;
+    padding-left: 20px;
+    color: #aaa;
+  }
 
-a {
-  text-decoration: none;
-  color: #141414;
-}
+  .img-desc {
+    width: 20px;
+    margin-right: 10px;
+  }
 
-.d-flex {
-  display: -ms-flexbox;
-  display: flex;
-}
+  .itens-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+  }
 
-.justify-content-between {
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
+  .card-task {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 25px;
+    height: 200px;
+  }
+  button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+  }
 
-.align-items-center {
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.col {
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  max-width: 100%;
-}
-
-.paddingBottom50 {
-  padding-bottom: 50px;
-}
-
-.maxW340 {
-  max-width: 340px;
-}
-
-.button-default {
-  border-radius: 4px;
-  background-color: #141414;
-  color: #ffffff;
-  border: none;
-  font-size: 12px;
-  cursor: pointer;
-  margin-top: 10px;
-  height: 30px;
-  width: 100%;
-  max-width: 150px;
-}
-
-.button-default:hover {
-  background-color: #333;
-}
-
-.bt-add {
-  border-radius: 4px;
-  color: #141414;
-  border: none;
-  font-size: 14px;
-  cursor: pointer;
-  line-height: 48px;
-  margin-top: 26px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-
-.task-icon {
-  width: 25px;
-  height: 25px;
-  margin-right: 5px;
-}
-
-.bt-add:hover {
-  background-color: #c4c4c4;
-  width: 100%;
-  transition: 1s ease;
-}
-/* formulário */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.283);
-}
-label {
-  margin-right: 5px;
-}
-
-/* Efeito ao focar nos inputs */
-.form-input:focus {
-  outline: none; /* Remove borda padrão */
-  border-color: #aaa; /* Cor roxa para o foco */
-  box-shadow: 0 0 6px rgba(98, 0, 238, 0.4); /* Sombra leve */
-  background-color: #f9f9ff; /* Fundo ligeiramente destacado */
-}
-
-.desc-input {
-  border: none;
-  text-decoration: none;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  resize: none;
-}
-
-input {
-  border: none;
-  text-decoration: none;
-}
-input::placeholder {
-  color: #aaa; /* Cinza claro */
-  font-family: Arial, Helvetica, sans-serif; /* Estilo para distinguir do texto inserido */
-}
-
-input,
-select {
-  outline: 0;
-}
-
-.desc-input::placeholder {
-  color: #aaa; /* Cinza claro */
-  font-family: Arial, Helvetica, sans-serif; /* Estilo para distinguir do texto inserido */
-  padding-top: 20px;
-}
-
-label {
-  font-size: 12px;
-  font-weight: bold;
-}
-
-/* Estilização específica para data picker */
-.input-date {
-  padding: 6px 14px;
-  font-family: inherit; /* Usa a fonte padrão do formulário */
-  color: #141414;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  width: 40%;
-  padding: 10px 14px; /* Espaçamento interno confortável */
-  font-size: 15px; /* Tamanho de texto maior */
-  border: 1px solid #ccc; /* Borda cinza clara */
-  border-radius: 4px; /* Bordas arredondadas */
-  background-color: #fff;
-  box-sizing: border-box; /* Padding incluso no tamanho */
-  transition: all 0.3s ease; /* Transição suave para foco */
-}
-
-/* Adição de transição ao hover no input */
-.form-input:hover {
-  border-color: #888; /* Bordas levemente destacadas */
-}
-
-.input-data:hover {
-  border-color: #888; /* Bordas levemente destacadas */
-}
-
-.form-input {
-  height: 35px;
-  display: flex;
-  align-items: center;
-  width: 60%;
-  padding: 10px 14px; /* Espaçamento interno confortável */
-  font-size: 15px; /* Tamanho de texto maior */
-  color: #333; /* Cor do texto */
-  border: 1px solid #ccc; /* Borda cinza clara */
-  border-radius: 4px; /* Bordas arredondadas */
-  background-color: #fff;
-  box-sizing: border-box; /* Padding incluso no tamanho */
-  transition: all 0.3s ease; /* Transição suave para foco */
-}
-
-.form-input-desc {
-  height: 70px;
-  display: flex;
-  align-items: center;
-  width: 60%;
-  padding: 10px 14px; /* Espaçamento interno confortável */
-  font-size: 15px; /* Tamanho de texto maior */
-  color: #333; /* Cor do texto */
-  border: 1px solid #ccc; /* Borda cinza clara */
-  border-radius: 4px; /* Bordas arredondadas */
-  background-color: #fff;
-  box-sizing: border-box; /* Padding incluso no tamanho */
-  transition: all 0.3s ease; /* Transição suave para foco */
-}
-.form-input-desc:hover {
-  border-color: #888; /* Bordas levemente destacadas */
-}
-
-.div-button {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
-}
-
-.form-icon {
-  width: 20px;
-  height: 20px;
-}
-
-/* Tabela Tasks */
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-th {
-  background-color: #141414;
-  color: #fff;
-}
-
-th,
-td {
-  padding: 12px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-  vertical-align: middle;
-}
-
-.img-edit {
-  width: 20px;
-  height: 20px;
-}
-
-.img-delete {
-  width: 25px;
-  height: 25px;
-}
-
-select {
-  border: none;
-}
-
-.form-input-select {
-  height: 35px;
-  display: flex;
-  align-items: center;
-  width: 35%;
-  padding: 10px 14px; /* Espaçamento interno confortável */
-  font-size: 15px; /* Tamanho de texto maior */
-  color: #333; /* Cor do texto */
-  border: 1px solid #ccc; /* Borda cinza clara */
-  border-radius: 4px; /* Bordas arredondadas */
-  background-color: #fff;
-  box-sizing: border-box; /* Padding incluso no tamanho */
-  transition: all 0.3s ease; /* Transição suave para foco */
-}
-.form-input-select:hover {
-  border-color: #888; /* Bordas levemente destacadas */
-}
-
-button {
-  border: none;
-  background-color: #fff;
-  cursor: pointer;
+  .button-default {
+    border-radius: 4px;
+    background-color: #d53d3d;
+    color: #ffffff;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+    max-width: 150px;
+  }
 }

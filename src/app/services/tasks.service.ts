@@ -7,7 +7,7 @@ import { Task } from '../../../Task';
 })
 export class TasksService {
 
-  private apiUrl = ' http://localhost:11863/api/tasks';
+  private apiUrl = 'https://api-easytask-production-3b67.up.railway.app/api/tasks';
 
   constructor(private http: HttpClient) {}
 

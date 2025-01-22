@@ -48,7 +48,7 @@ export class UpdateComponent {
     this.taskService.updateTask(this.task.id, this.task).subscribe({
       next: () => {
         this.showSuccess();
-        this.router.navigate(['/tasks']); // Redirecionar após o update
+        this.router.navigate(['/easy-task']); // Redirecionar após o update
       },
       error: (err) => this.showWarning(),
     });

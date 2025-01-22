@@ -1,4 +1,6 @@
-<section>
+<!-- Desktop -->
+
+<section class="desktop-only">
     <div class="container">
         <div class="bt-add">
             <button class="toggle-button" (click)="toggleForm(); $event.preventDefault()"><img class="task-icon"
@@ -39,7 +41,7 @@
         </div>
     </div>
 </section>
-<section>
+<section class="desktop-only">
     <div class="container-task">
         <table>
             <thead>
@@ -65,5 +67,28 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+</section>
+
+<!-- Mobile -->
+
+<section class="mobile-only">
+    <div class="container-task">
+
+        <div class="card-task" *ngFor="let task of tasks">
+            <p class="title">{{task.title}}</p>
+            <div class="itens-card">
+                <p class="description"><img class="img-desc" src="menu-alt-2-svgrepo-com.svg"
+                        alt="">{{task.description}}
+                </p>
+            </div>
+            <div class="itens-card">
+                <p class="description"><img class="img-desc" src="alarm-svgrepo-com.svg" alt="">{{task.time}}
+                </p>
+            </div>
+            <p>{{task.status}}</p>
+            <a href="update/{{task.id}}">Update</a>
+            <button class="button-default" (click)="deleteTask(task.id)">Deletar</button>
+        </div>
     </div>
 </section>
