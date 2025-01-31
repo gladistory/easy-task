@@ -695,4 +695,26 @@
     width: 20px;
     height: 20px;
   }
+
+  .form-input-select {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    padding: 10px 14px; /* Espaçamento interno confortável */
+    font-size: 15px; /* Tamanho de texto maior */
+    color: #333; /* Cor do texto */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 4px; /* Bordas arredondadas */
+    background-color: #fff;
+    box-sizing: border-box; /* Padding incluso no tamanho */
+    transition: all 0.3s ease; /* Transição suave para foco */
+  }
+  .form-input-select:hover {
+    border-color: #888; /* Bordas levemente destacadas */
+  }
+
+  select {
+    border: none;
+  }
 }
