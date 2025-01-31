@@ -93,8 +93,7 @@ a {
   cursor: pointer;
   margin-top: 10px;
   height: 30px;
-  width: 100%;
-  max-width: 150px;
+  width: 100px;
 }
 
 .button-default:hover {
@@ -131,7 +130,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 100%;
+  width: 80%;
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
@@ -194,7 +193,7 @@ label {
   height: 35px;
   display: flex;
   align-items: center;
-  width: 40%;
+  width: 60%;
   padding: 10px 14px; /* Espaçamento interno confortável */
   font-size: 15px; /* Tamanho de texto maior */
   border: 1px solid #ccc; /* Borda cinza clara */
@@ -217,7 +216,7 @@ label {
   height: 35px;
   display: flex;
   align-items: center;
-  width: 60%;
+  width: 100%;
   padding: 10px 14px; /* Espaçamento interno confortável */
   font-size: 15px; /* Tamanho de texto maior */
   color: #333; /* Cor do texto */
@@ -232,7 +231,7 @@ label {
   height: 70px;
   display: flex;
   align-items: center;
-  width: 60%;
+  width: 100%;
   padding: 10px 14px; /* Espaçamento interno confortável */
   font-size: 15px; /* Tamanho de texto maior */
   color: #333; /* Cor do texto */
@@ -264,8 +263,8 @@ label {
   cursor: pointer;
   margin-top: 10px;
   height: 30px;
-  width: 100%;
-  max-width: 150px;
+  width: 80%;
+  max-width: 100px;
   align-items: center;
   text-align: center;
   display: flex;
@@ -324,7 +323,7 @@ select {
   height: 35px;
   display: flex;
   align-items: center;
-  width: 35%;
+  width: 60%;
   padding: 10px 14px; /* Espaçamento interno confortável */
   font-size: 15px; /* Tamanho de texto maior */
   color: #333; /* Cor do texto */
