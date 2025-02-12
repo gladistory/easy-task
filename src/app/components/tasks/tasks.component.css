@@ -470,44 +470,6 @@
     color: #141414;
   }
 
-  .d-flex {
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .justify-content-between {
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-
-  .align-items-center {
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-
-  .col {
-    -ms-flex-preferred-size: 0;
-    flex-basis: 0;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    max-width: 100%;
-  }
-
-  .paddingBottom50 {
-    padding-bottom: 50px;
-  }
-
-  .maxW340 {
-    max-width: 340px;
-  }
-
   .button-default {
     border-radius: 4px;
     background-color: #141414;
