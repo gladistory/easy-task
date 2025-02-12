@@ -385,12 +385,12 @@
     max-width: 150px;
   }
   .img-delete {
-    width: 30px;
-    height: 30px;
-  }
-  .img-edit {
     width: 25px;
     height: 25px;
+  }
+  .img-edit {
+    width: 20px;
+    height: 20px;
   }
   .actions {
     width: 100%;
@@ -408,21 +408,23 @@
   .border {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 5px;
+    justify-content: right;
   }
 
   .update {
-    width: 65px;
+    height: 40px;
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.182);
-    margin-right: 150px;
   }
   .delete {
-    width: 65px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 40px;
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
