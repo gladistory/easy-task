@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>Registrar</h2>
+    <form (ngSubmit)="register()">
+        <input type="text" [(ngModel)]="name" name="name" placeholder="Nome" required />
+        <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required />
+        <input type="password" [(ngModel)]="password" name="password" placeholder="Senha" required />
+        <button type="submit">Registrar</button>
+    </form>
+    <div class="switch">
+        Já tem conta? <a href="login">Login</a>
+    </div>
+</div>
